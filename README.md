@@ -1,3 +1,5 @@
 # week 1 learning 
 
-## learning markdown 
+Notes: 
+* [markdown](README.md)
+* [agile](Agile-for-devops/README.md)
