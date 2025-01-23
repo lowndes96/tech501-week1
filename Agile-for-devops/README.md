@@ -30,9 +30,10 @@ principles behind the manifesto:
 a phlisophy / way of thinking 
 changes based on customer requirements 
 ## is agile the best for every company 
-no
-culture 
-expensive 
+no! <br>
+* the workplace has to want to adapt/ change to an agile culture 
+* can be expensive 
+* other philosphies may work better for a different project / type of workplace 
 ## what is a focusing team focusing on 
 An agile focusing team is a self-directed team that works to deliver value in increments. They focus on the customer, and work to improve their product continuously
 ## how does devops enable a delivering team to release whenever the busness wants to ship 
