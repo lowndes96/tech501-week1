@@ -7,6 +7,8 @@
   - [links](#links)
 
 
+control shift p , make table of contents 
+
 ## learning markdown 
 
 ### Bullet point 
