@@ -3,9 +3,11 @@
 
 - [Azure notes](#azure-notes)
     - [Things to remember:](#things-to-remember)
-  - [Creating ssh key on my machine](#creating-ssh-key-on-my-machine)
-  - [Creating a virtual network](#creating-a-virtual-network)
-  - [Creating VM:](#creating-vm)
+  - [ssh key](#ssh-key)
+    - [Creating ssh key on my machine](#creating-ssh-key-on-my-machine)
+    - [Creating a virtual network](#creating-a-virtual-network)
+  - [VM](#vm)
+    - [Creating VM:](#creating-vm)
     - [deleting vm](#deleting-vm)
     - [running a new vm](#running-a-new-vm)
       - [first run 2 commands:](#first-run-2-commands)
@@ -15,14 +17,19 @@
 all azure items must have an owner: my_name tag <br>
 naming convention: tech501-my_name-thing_created-identifier
 
-## Creating ssh key on my machine
+## ssh key 
+### Creating ssh key on my machine
 * 1. navigate to .ssh folder 
   * can use the ls -a command to see the hidden folders 
 * 2. run the ssh-keygen command 
 * 3. follow the prompts 
 
+using the ssh key: 
+ssh-copy-id (can be used to avoid re-entering)
+can also go to vm on azure and copy from the connect menu 
 
-## Creating a virtual network 
+
+### Creating a virtual network 
 
 * public subnet 10.0.2.0/24 + private subnet 10.0.3.0/24 - all use sections of the space (not full half)
 * tech501 - emily-2-subnet-vnet 
@@ -30,8 +37,8 @@ naming convention: tech501-my_name-thing_created-identifier
   <br>
 **look up IP version 4** 
 
-
-## Creating VM: 
+## VM 
+### Creating VM: 
 
 **Our virtual machine**: <br>
 **Name**: tech501-your_name-first-vm <br>
