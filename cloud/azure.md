@@ -9,8 +9,6 @@
   - [VM](#vm)
     - [Creating VM:](#creating-vm)
     - [deleting vm](#deleting-vm)
-    - [running a new vm](#running-a-new-vm)
-      - [first run 2 commands:](#first-run-2-commands)
 
 
 ### Things to remember: 
@@ -71,15 +69,4 @@ filter for name <br>
 delete: disk, network interface group, maybe the network security key, public IP, VM itself <br>
 keep: virtual network + ssh group <br>
 
-### running a new vm 
 
-#### first run 2 commands: 
-- sudo apt update
-- sudo apt upgrade -y 
-
- > #### making a script: 
-> * nano prevision.sh 
-> * sudo apt install nginx
-> * sudo systemct1 restart nginx
-> * status nginx
-> * sudo systemctl enable nginx
