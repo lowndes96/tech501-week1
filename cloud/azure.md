@@ -49,3 +49,16 @@ home > resouce group > tech501
 filter for name
 delete: disk, network interface group, maybe the network security key, public IP, VM itself 
 keep: virtual network + ssh group 
+
+## running a new vm 
+
+first run 2 commands: 
+- sudo apt update
+- sudo apt upgrade -y 
+
+making a script: 
+nano prevision.sh 
+sudo apt install nginx
+sudo systemct1 restart nginx
+status nginx
+sudo systemctl enable nginx
