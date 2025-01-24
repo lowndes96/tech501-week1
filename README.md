@@ -6,3 +6,4 @@ Notes:
 * [cloud](cloud/README.md)
   * [azure](cloud/azure.md)
   * [extra notes](cloud/extra_notes.md)
+*  [linux](linux/README.md)
