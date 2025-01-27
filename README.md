@@ -7,3 +7,4 @@ Notes:
   * [azure](cloud/azure.md)
   * [extra notes](cloud/extra_notes.md)
 *  [linux](linux/README.md)
+   *  [research questions](linux/research_tasks.md)
