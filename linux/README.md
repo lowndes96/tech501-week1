@@ -20,6 +20,11 @@
         - [persistant](#persistant)
   - [looking at files](#looking-at-files)
   - [editing files](#editing-files)
+  - [27th](#27th)
+    - [what is a linux process?](#what-is-a-linux-process)
+    - [running a process in the background (11:15 on )](#running-a-process-in-the-background-1115-on-)
+    - [killing a process:](#killing-a-process)
+    - [what is the difference between these kill commands?](#what-is-the-difference-between-these-kill-commands)
 
 ### random useful commands (move latter if needed)
 sudo !! - runs previous command with sudo at front <br>
@@ -54,7 +59,24 @@ curl webpath.jpg --output cat.jpg
 > sudo cp /var/www/html/index.nginx-debian.html /var/www/html/backup/index.nginx-debian.html <br>
 ##### make a new page 
 > sudo nano /var/www/html/index.htm <br>
-**add html next time on VM (but pretty much a standard html page)
+  GNU nano 2.9.3       /var/www/html/index.html                 
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-$
+    <title>woah</title>
+</head>
+<body>
+    <h1>emily made a  Webpage!</h1>
+    <p>big day .</p>
+<img src="image/frog.jpg" alt="frog image" >
+</body>
+</html>
+```
+
 ##### adding an image to the page 
 > curl https://media.istockphoto.com/id/175397603/photo/frog.jpg --output frog.jpg <br>
 or <br>
@@ -114,6 +136,47 @@ this adds the line to the end of the file ( a single > would overwrite the file)
 * `touch file.txt` makes file 
 * `nano file.txt` makes/opens file for editing 
 
+
+## 27th 
+
+### what is a linux process?  
+
+* process is an active instance of that program running in memory (could be taking up CPU)
+* `ps` can be used to list processes and `kill` to terminate
+* multi-core cpu - the more 'cores' the more processes that can be run at once 
+* user process is ustally related to a terminal, there is also a process ID (PID) for each one
+  * you are also able to have parent and child processes (parent process is able to start a child process)
+* `ps --help` shows help  
+* `ps -e` will show all processes 
+* `ps aux` aux is a combination of 3 flags 
+  * a = show processes for all users
+  * u = display the process's user/owner
+  * x = also show processes not attached to a terminal
+<br>
+
+### running a process in the background (11:15 on )
+* `sleep 3` delays execution of code by 3 seconds 
+* `sleep 3 &` will run this process in the background 
+  <br>
+### killing a process: 
+* if there is a tool to manage a particular process it can be switched on and off via that it `sudo systemctl start nginex` 
+* **missed something** 
+* `sudo systemctl status nginex` 
+* `kill process` is a more blunt way, and can be used if something goes wrong 
+* `kill -1 processID` hang-up most gentle form of kill  
+* `kill processID` graceful shutdown (is the default if no numerical argument)
+* brute force `kill -9 processID`
+* `ps aux | grep sleep`
+<br>
+* parent process will restart a child process if killed, as that is its 'job' 
+* have to kill the parent process 'gracefully' 
+<br>
+
+### what is the difference between these kill commands?  
+
+* medium kill - will 'gracefully' terminate child processes associated with the parent process 1st 
+* brute force kill - will shutdown parent first, and the child processes stay as 'zombie' processes and are left running in memory 
+* to find child processses can add flag for 'parent process' (look up in help guide), command column can also give clues
 
 
 
